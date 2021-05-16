@@ -21,17 +21,17 @@ public class StepNextConditionalJobConfiguration {
     public Job stepNextConditionalJob() {
         return jobBuilderFactory.get("stepNextConditionalJob")
             .start(conditionalJobStep1())
-            .on("FAILED")
-            .to(conditionalJobStep3())
-            .on("*")
+                .on("FAILED")
+                .to(conditionalJobStep3())
+                .on("*")
             .end()
-            .from(conditionalJobStep1())
-            .on("*")
-            .to(conditionalJobStep2())
-            .next(conditionalJobStep3())
-            .on("*")
+                .from(conditionalJobStep1())
+                .on("*")
+                .to(conditionalJobStep2())
+                .next(conditionalJobStep3())
+                .on("*")
             .end()
-            .end()
+                .end()
             .build();
 
     }
