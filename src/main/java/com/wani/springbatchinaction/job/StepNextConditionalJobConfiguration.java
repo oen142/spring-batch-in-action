@@ -36,16 +36,18 @@ public class StepNextConditionalJobConfiguration {
 
     }
 
-    private Step conditionalJobStep2() {
-        return null;
-    }
-
-    private Step conditionalJobStep3() {
+    @Bean
+    public Step conditionalJobStep1() {
         return null;
     }
 
     @Bean
-    public Step conditionalJobStep1() {
+    public Step conditionalJobStep2() {
+        return null;
+    }
+
+    @Bean
+    public Step conditionalJobStep3() {
         return null;
     }
 
